@@ -5,3 +5,7 @@ def reverse_string(s):
 def is_palindrome(s):
     cleaned = s.replace(" ", "").lower()
     return cleaned == cleaned[::-1]
+
+
+def count_vowels(s):
+    return sum(1 for c in s.lower() if c in "aeiou")
