@@ -24,3 +24,10 @@ def truncate(s, max_len, suffix="..."):
 def snake_to_camel(s):
     parts = s.split("_")
     return parts[0] + "".join(p.capitalize() for p in parts[1:])
+
+
+def camel_to_snake(s):
+    import re
+    s = re.sub(r"([A-Z]+)([A-Z][a-z])", r"\1_\2", s)
+    s = re.sub(r"([a-z\d])([A-Z])", r"\1_\2", s)
+    return s.lower()
