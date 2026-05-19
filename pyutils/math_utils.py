@@ -29,3 +29,9 @@ def factorial(n):
     for i in range(2, n + 1):
         result *= i
     return result
+
+
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return abs(a)
