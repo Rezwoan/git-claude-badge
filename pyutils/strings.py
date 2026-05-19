@@ -19,3 +19,8 @@ def truncate(s, max_len, suffix="..."):
     if len(s) <= max_len:
         return s
     return s[:max_len - len(suffix)] + suffix
+
+
+def snake_to_camel(s):
+    parts = s.split("_")
+    return parts[0] + "".join(p.capitalize() for p in parts[1:])
