@@ -13,3 +13,9 @@ def count_vowels(s):
 
 def capitalize_words(s):
     return " ".join(word.capitalize() for word in s.split())
+
+
+def truncate(s, max_len, suffix="..."):
+    if len(s) <= max_len:
+        return s
+    return s[:max_len - len(suffix)] + suffix
