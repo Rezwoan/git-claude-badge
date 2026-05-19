@@ -1,0 +1,28 @@
+# pyutils
+
+A collection of small, useful Python utility modules.
+
+## Modules
+
+- `pyutils/strings.py` — String manipulation utilities
+- `pyutils/math_utils.py` — Math and number utilities
+- `pyutils/list_utils.py` — List manipulation utilities
+- `pyutils/dict_utils.py` — Dictionary utilities
+- `pyutils/file_utils.py` — File I/O utilities
+- `pyutils/date_utils.py` — Date and time utilities
+- `pyutils/validators.py` — Input validation utilities
+
+## Installation
+
+```bash
+git clone https://github.com/Rezwoan/git-claude-badge.git
+cd git-claude-badge
+```
+
+## Usage
+
+```python
+from pyutils.strings import reverse_string, is_palindrome
+from pyutils.math_utils import is_prime, fibonacci
+from pyutils.list_utils import flatten, chunk
+```
