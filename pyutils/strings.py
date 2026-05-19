@@ -31,3 +31,13 @@ def camel_to_snake(s):
     s = re.sub(r"([A-Z]+)([A-Z][a-z])", r"\1_\2", s)
     s = re.sub(r"([a-z\d])([A-Z])", r"\1_\2", s)
     return s.lower()
+
+
+def remove_duplicates_str(s):
+    seen = set()
+    result = []
+    for c in s:
+        if c not in seen:
+            seen.add(c)
+            result.append(c)
+    return "".join(result)
