@@ -1,2 +1,7 @@
 def reverse_string(s):
     return s[::-1]
+
+
+def is_palindrome(s):
+    cleaned = s.replace(" ", "").lower()
+    return cleaned == cleaned[::-1]
