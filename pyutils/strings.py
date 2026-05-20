@@ -41,3 +41,12 @@ def remove_duplicates_str(s):
             seen.add(c)
             result.append(c)
     return "".join(result)
+
+
+def slugify(s):
+    import re
+    s = s.lower().strip()
+    s = re.sub(r"[^\w\s-]", "", s)
+    s = re.sub(r"[\s_]+", "-", s)
+    s = re.sub(r"-+", "-", s)
+    return s.strip("-")
