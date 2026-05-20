@@ -50,3 +50,15 @@ def slugify(s):
     s = re.sub(r"[\s_]+", "-", s)
     s = re.sub(r"-+", "-", s)
     return s.strip("-")
+
+
+def title_case(s):
+    minor = {"a", "an", "the", "and", "but", "or", "for", "nor", "on", "at", "to", "by", "in", "of"}
+    words = s.split()
+    result = []
+    for i, word in enumerate(words):
+        if i == 0 or word.lower() not in minor:
+            result.append(word.capitalize())
+        else:
+            result.append(word.lower())
+    return " ".join(result)
