@@ -39,3 +39,7 @@ def gcd(a, b):
 
 def lcm(a, b):
     return abs(a * b) // gcd(a, b) if a and b else 0
+
+
+def clamp(value, min_val, max_val):
+    return max(min_val, min(max_val, value))
