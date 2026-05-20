@@ -10,3 +10,14 @@ def deep_merge(base, override):
         else:
             result[key] = value
     return result
+
+
+def flatten_keys(d, sep=".", prefix=""):
+    items = {}
+    for k, v in d.items():
+        full_key = f"{prefix}{sep}{k}" if prefix else k
+        if isinstance(v, dict):
+            items.update(flatten_keys(v, sep=sep, prefix=full_key))
+        else:
+            items[full_key] = v
+    return items
