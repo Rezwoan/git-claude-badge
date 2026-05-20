@@ -21,3 +21,8 @@ def is_ip(s):
         if not 0 <= int(part) <= 255:
             return False
     return True
+
+
+def is_hex_color(s):
+    pattern = re.compile(r"^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$")
+    return bool(pattern.match(s))
