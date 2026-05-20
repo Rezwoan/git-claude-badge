@@ -47,3 +47,7 @@ def clamp(value, min_val, max_val):
 
 def lerp(a, b, t):
     return a + (b - a) * t
+
+
+def digits_sum(n):
+    return sum(int(d) for d in str(abs(n)))
