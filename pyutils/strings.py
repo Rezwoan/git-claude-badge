@@ -62,3 +62,21 @@ def title_case(s):
         else:
             result.append(word.lower())
     return " ".join(result)
+
+
+def wrap_text(s, width):
+    words = s.split()
+    lines = []
+    current = []
+    current_len = 0
+    for word in words:
+        if current_len + len(word) + (1 if current else 0) > width:
+            lines.append(" ".join(current))
+            current = [word]
+            current_len = len(word)
+        else:
+            current_len += len(word) + (1 if current else 0)
+            current.append(word)
+    if current:
+        lines.append(" ".join(current))
+    return "\n".join(lines)
