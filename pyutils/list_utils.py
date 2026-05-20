@@ -13,3 +13,9 @@ def dedupe_ordered(lst):
             seen.add(item)
             result.append(item)
     return result
+
+
+def partition(lst, predicate):
+    trues = [x for x in lst if predicate(x)]
+    falses = [x for x in lst if not predicate(x)]
+    return trues, falses
